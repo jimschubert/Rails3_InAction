@@ -1,6 +1,16 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
+group :development do
+  gem 'haml-rails'
+end
+group :test do
+  gem 'rspec-rails'
+end
+group :cucumber do
+  gem 'cucumber-rails'
+  gem 'capybara'
+end
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
