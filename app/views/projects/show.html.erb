@@ -6,3 +6,9 @@
 	:confirm => "Are you sure you want to delete this project?" %>
   <%= link_to "New Ticket", new_project_ticket_path(@project) %>
 </menu>
+
+<ul id='tickets'>
+  <% @project.tickets.each do |ticket| %>
+    <li><%= link_to "#{ticket.id} - #{ticket.title}", [@project, ticket] %>
+  <% end %>
+</ul>
