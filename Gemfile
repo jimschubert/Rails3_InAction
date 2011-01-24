@@ -13,6 +13,7 @@ end
 group :cucumber do
   gem 'cucumber-rails'
   gem 'capybara'
+  gem 'email_spec'
 end
 
 # Bundle edge Rails instead:
