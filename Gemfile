@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.3'
+gem 'devise'
+
 group :development do
   gem 'haml-rails'
 end
