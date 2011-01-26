@@ -3,6 +3,11 @@ Feature: Editing tickets
 	As a user
 	I want a form to edit the tickets
 	Background:
+		Given there are the following users:
+		| email | password |
+		| user@ticketee.com | password |
+		And I am signed in as them
+
 		Given there is a project called "TextMate 2"
 		And that project has a ticket:
 		| title | description |
@@ -13,13 +18,13 @@ Feature: Editing tickets
 		When I follow "Edit"
 	Scenario: Updating a ticket
 		When I fill in "Title" with "Make it really shiny!"
-		And I press "Update"
+		And I press "Update Ticket"
 		Then I should see "Ticket has been updated."
 		And I should be on the "Make it really shiny!" ticket in the "TextMate 2" project
 		And I should see "Make it really shiny!"
-		But I should not see "Make it shiny!"
+		And I should not see "Make it shiny!"
 	Scenario: Updating a ticket with invalid information
 		When I fill in "Title" with ""
-		And I press "Update"
+		And I press "Update Ticket"
 		Then I should see "Ticket has not been updated."
 

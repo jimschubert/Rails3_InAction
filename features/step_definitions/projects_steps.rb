@@ -12,3 +12,7 @@ end
 Then /^I should see the following projects:$/ do |expected_projects_table|
   expected_projects_table.diff!(tableish('table tr', 'td,th'))
 end
+
+Given /^there is a project called "([^\"]*)"$/ do |name|
+  @project =  Factory.create(:project, :name => name)
+end

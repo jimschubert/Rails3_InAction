@@ -12,5 +12,5 @@ Feature: Deleting projects
 	And I am on the homepage
 	When I follow "TextMate 2"
 	And I follow "Delete"
-	Then I should see "Project has been deleted."
-	Then I should not see "TextMate 2"
+	Then I should see "You must be an admin to do that."
+	Then I should see "TextMate 2"
