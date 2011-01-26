@@ -1,8 +1,8 @@
 <h1>Welcome to Ticketee</h1>
 This is #index
-
-<%= link_to "New Project", new_project_path %>
-
+<%= admins_only do %>
+  <%= link_to "New Project", new_project_path %>
+<% end %>
 <h2>Projects</h2>
 <ul>
   <% @projects.each do |project| %>
